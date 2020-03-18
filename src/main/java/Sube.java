@@ -13,19 +13,25 @@ import java.time.LocalDateTime;
  *      Emjemplo: durante el mes de Marzo todos los dias habiles un usuario hace cinco viajes de 20 pesos cada uno.
  *      Asumiendo que hay 20 dias habiles se lo bonificará con 300 pesos.
  */
+
 public class Sube {
     private String cardId;
     public BigDecimal amount = BigDecimal.ZERO;
     public LocalDateTime lastTrip = null;
+
     public Sube(String cardId) {
         this.cardId = cardId;
     }
+
     public void addFounds(BigDecimal amount) {
         this.amount = this.amount.add(amount);
     }
+
     public void travel(BigDecimal amount) {
         this.amount = this.amount.subtract(amount);
     }
+
     public static void main(String[] args) {
+
     }
 }
