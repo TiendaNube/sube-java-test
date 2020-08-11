@@ -8,10 +8,12 @@ import java.time.LocalDateTime;
  * + Registrar un nuevo viaje y descontar el saldo, teniendo en cuenta que:
  *      - Se aplicará un descuento del 10% si el tiempo transcurrido entre el viaje actual y el último es menor a una hora.
  *      - Si el saldo resultante es menor a -50 pesos no se podrá realizar el viaje.
- * + Se bonificará al usuriao con un 15% de descuento sobre lo consumido en el mes anterior, si el promedio diario
- *      en días habiles fue de cinco viajes.
- *      Emjemplo: durante el mes de Marzo todos los dias habiles un usuario hace cinco viajes de 20 pesos cada uno.
- *      Asumiendo que hay 20 dias habiles se lo bonificará con 300 pesos.
+ * + Se bonificará al usuriao con un 15% de descuento sobre lo consumido en el mes anterior si en promedio hizo tres viajes por día. Teniendo en
+ *      cuenta unicamente los días hábiles.
+ *      Emjemplo 1: durante el mes de Marzo todos los dias habiles un usuario hacen tres viajes de 20 pesos cada uno.
+ *      Asumiendo que hay 20 dias habiles se lo bonificará con 180 pesos (15% de $1200).
+ *.     Ejemplo 2: durante el mes de Marzo todos los Lunes, Miercoles y Viernes, se realizan 9 viajes en cada uno de esos dias respectivamente.
+ *      Asumiendo que hay 20 dias habiles el promedio por día es de 5,4 viajes por día, bonificando $324 (15% de $2160).
  */
 
 public class Sube {
